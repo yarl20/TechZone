@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Intranet - TechZone</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="/js/menuToggle.js" defer></script>
+  <script src="/js/intranet.js" defer></script>
+</head>
+<body>
+
+<header>
+  <h1>Intranet TechZone</h1>
+  <button id="menu-toggle" aria-label="Menú de navegación">☰</button>
+  <nav class="menu">
+    <a href="index.html">Inicio</a>
+    <a href="catalogo.html">Catálogo</a>
+    <a href="contacto.html">Contacto</a>
+    <button id="btnCerrarSesion" class="cerrar-sesion">Cerrar sesión</button>
+  </nav>
+</header>
+
+<main class="fade-in">
+  <section>
+    <h2 class="zoom-in">🎯 Panel de Administración</h2>
+    <p>Selecciona una sección para comenzar:</p>
+
+    <!-- Botones de navegación -->
+    <div style="margin-bottom: 30px;">
+      <button class="agregar-carrito" onclick="mostrarModulo('inventario')">📦 Inventario</button>
+      <button class="agregar-carrito" onclick="mostrarModulo('reportes')">📊 Reportes</button>
+      <button class="agregar-carrito" onclick="mostrarModulo('usuarios')">👥 Usuarios</button>
+      <button class="agregar-carrito" onclick="mostrarModulo('pedidos')">🛒 Pedidos</button>
+    </div>
+
+    <!-- Contenido dinámico -->
+    <div id="contenido-modulo">
+      <div id="inventario" class="modulo oculto">
+        <h3>📦 Inventario</h3>
+        <p>Aquí puedes ver y editar el inventario de productos.</p>
+      </div>
+
+      <div id="reportes" class="modulo oculto">
+        <h3>📊 Reportes</h3>
+        <p>Estadísticas y reportes del negocio se muestran aquí.</p>
+      </div>
+
+      <div id="usuarios" class="modulo oculto">
+        <h3>👥 Gestión de usuarios</h3>
+        <p>Agregar, editar o eliminar usuarios registrados.</p>
+      </div>
+
+      <div id="pedidos" class="modulo oculto">
+        <h3>🛒 Pedidos</h3>
+        <p>Lista de pedidos activos y su estado de entrega.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="catalogo.html">Catálogo</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+  <p>TechZone © 2025 - Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>
